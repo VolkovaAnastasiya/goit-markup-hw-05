@@ -158,7 +158,7 @@ img {
 
 .link-current::after {
   position: absolute;
-  width: 48px;
+  width: 100%;
   height: 4px;
   content: "";
   bottom: 0;
