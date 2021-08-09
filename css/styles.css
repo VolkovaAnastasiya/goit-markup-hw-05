@@ -131,7 +131,6 @@ img {
 }
 
 .site-nav-link {
-  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -152,15 +151,20 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav-link.link.current::after {
+.link-current {
+  position: relative;
+  display: inline-flex;
+}
+
+.link-current::after {
+  position: absolute;
   width: 48px;
   height: 4px;
   content: "";
+  bottom: 0;
   background-size: contain;
-  top: 25px;
 
   background-color: var(--accent-color);
-  color: #188ce8;
   border-radius: 2px;
 }
 
