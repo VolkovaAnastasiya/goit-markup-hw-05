@@ -159,7 +159,6 @@ img {
   content: "";
   left: 0;
   bottom: 0;
-  background-size: contain;
 
   background-color: var(--accent-color);
   border-radius: 2px;
@@ -404,7 +403,8 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-link:hover .img-thumb .img-overlay {
+.projects-link:hover .img-thumb .img-overlay,
+.projects-link:focus .img-thumb .img-overlay {
   transform: translate(0%);
 }
 
@@ -609,48 +609,40 @@ a.link:focus .icon-link {
   margin: 0px;
 }
 .logo-card {
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   margin-right: 30px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.logo-card:focus,
-.logo-card:hover {
-  border: 1px solid var(--accent-color);
 }
 
 .partners {
   display: flex;
+  width: 170px;
+  height: 92px;
   justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  transition-property: fill;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.partners:focus,
+.partners:hover {
+  border-color: var(--accent-color);
 }
 
 a.partners:focus .icon-logo,
 a.partners:hover .icon-logo {
   fill: var(--accent-color);
 }
-/* .logo-card > .logo {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  width: 106px;
-  height: 92px;
-} */
+
 .icon-logo {
   display: flex;
 
   justify-content: center;
   align-items: center;
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   fill: var(--fill-icon-color);
 }
@@ -784,6 +776,7 @@ a.partners:hover .icon-logo {
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -800,6 +793,7 @@ a.partners:hover .icon-logo {
   right: 0;
   top: 0;
   margin: 8px;
+  cursor: pointer;
 
   width: 30px;
   height: 30px;
@@ -812,6 +806,14 @@ a.partners:hover .icon-logo {
 .modal-close > .button-icon {
   width: 11px;
   height: 11px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close:hover .button-icon,
+.modal-close:focus .button-icon {
+  fill: var(--accent-color);
+}
+
 /* transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
